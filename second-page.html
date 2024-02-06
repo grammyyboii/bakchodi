@@ -17,15 +17,17 @@
             justify-content: center;
             height: 100vh;
             font-family: 'Press Start 2P', cursive;
-	    background-size: contain; /* Ensure the background image covers the entire screen */
+            background-size: cover; /* Ensure the background image covers the entire screen */
         }
 
         .prompt-container {
-            background-color: rgba(255, 255, 255, 0.5); /* White background with 0.8 opacity */
+            background-color: rgba(255, 255, 255, 0.5); /* White background with 0.5 opacity */
             border: 2px solid #001f3f; /* Dark blue outline */
             border-radius: 10px;
             text-align: center;
             overflow: hidden;
+            padding: 20px; /* Added padding for better spacing */
+            max-width: 80%; /* Limit container width for readability */
         }
 
         .prompt-message {
@@ -34,6 +36,13 @@
             margin: 20px;
             font-family: 'Press Start 2P', cursive;
             line-height: 1.5; /* Adjusted line height */
+        }
+
+        /* Media query for screens smaller than 600px (typical mobile screens) */
+        @media only screen and (max-width: 600px) {
+            .prompt-container {
+                max-width: 90%; /* Adjusted max-width for better readability on smaller screens */
+            }
         }
     </style>
 </head>
