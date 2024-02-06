@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Webpage Title</title>
+    <title>Grammy Boi</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
@@ -17,47 +17,58 @@
             justify-content: center;
             height: 100vh;
             font-family: 'Press Start 2P', cursive;
+            background-size: cover; /* Ensure the background image covers the entire screen */
         }
 
         .prompt-container {
-            background-color: rgba(0, 0, 0, 0.8); /* Black background with 0.8 opacity */
-            border: 2px solid #001f3f; /* Dark blue outline */
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid #001f3f;
             border-radius: 10px;
             text-align: center;
             overflow: hidden;
-            margin-bottom: 20px;
+            padding: 20px;
+            max-width: 80%; /* Limit container width for readability */
         }
 
         .prompt-question {
             font-size: 24px;
             font-weight: bold;
-            color: #fff; /* White text */
+            color: #fff;
             margin: 20px;
         }
 
         .prompt-options {
             display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
+            flex-direction: column; /* Change to column layout on smaller screens */
         }
 
         .prompt-option {
             display: inline-block;
-            padding: 10px 15px; /* Adjust button size */
-            border: 2px solid #000000; /* Dark blue outline */
+            padding: 10px 15px;
+            border: 2px solid #000000;
             border-radius: 5px;
             cursor: pointer;
             font-size: 18px;
-            color: #fff; /* White text */
+            color: #fff;
             text-decoration: none;
+            margin-bottom: 10px; /* Add margin between options */
         }
 
         .prompt-option:hover {
-            background-color: #000000; /* Dark blue background on hover */
+            background-color: #000000;
             color: #fff;
         }
 
+        /* Media query for screens smaller than 600px (typical mobile screens) */
+        @media only screen and (max-width: 600px) {
+            .prompt-options {
+                flex-direction: column; /* Change to column layout for options on smaller screens */
+            }
 
+            .prompt-option {
+                margin-right: 0; /* Remove right margin for options on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
