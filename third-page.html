@@ -11,29 +11,42 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background: url('https://i.pinimg.com/originals/e6/54/37/e65437fe0cf921e787575dbd7ddf663d.gif') center/cover no-repeat fixed; /* Replace with your third page GIF URL */
+            background: url('https://i.pinimg.com/originals/e6/54/37/e65437fe0cf921e787575dbd7ddf663d.gif') center/cover no-repeat fixed;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
             font-family: 'Press Start 2P', cursive;
-	    background-size: contain; /* Ensure the background image covers the entire screen */
+            background-size: cover; /* Ensure the background image covers the entire screen */
         }
 
         .prompt-container {
-            background-color: rgba(0, 0, 0, 0.5); /* Black background with 0.8 opacity */
-            border: 2px solid #92664a; /* Dark blue outline */
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 2px solid #92664a;
             border-radius: 10px;
             text-align: center;
             overflow: hidden;
+            padding: 20px; /* Add padding for better spacing */
+            max-width: 80%; /* Limit container width for readability */
         }
 
         .prompt-question {
             font-size: 24px;
             font-weight: bold;
-            color: #fff; /* White text */
+            color: #fff;
             margin: 20px;
             font-family: 'Press Start 2P', cursive;
+        }
+
+        /* Media query for screens smaller than 600px (typical mobile screens) */
+        @media only screen and (max-width: 600px) {
+            .prompt-container {
+                max-width: 90%; /* Adjusted max-width for better readability on smaller screens */
+            }
+            .prompt-question {
+                font-size: 18px; /* Adjusted font size for better readability on smaller screens */
+                margin: 10px; /* Adjusted margin for better spacing on smaller screens */
+            }
         }
     </style>
 </head>
